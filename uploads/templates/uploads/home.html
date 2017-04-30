@@ -1,0 +1,29 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'uploads/home.css' %}"/>
+
+<div class="button1">
+        <a href="{% url 'simple_upload' %}">Simple Upload</a>
+</div>
+    <p>
+    </p>
+    <p>
+      <a href="{% url 'model_form_upload' %}">Model Form Upload</a>
+    </p>
+
+  <p>UPLOADED FILES:</p>
+  <div class="Files">
+    <ul>
+    {% for obj in documents %}
+      <li>
+        <a href="{{ obj.document.url }}">{{ obj.document.name }}</a>
+         <a href="{% url 'delete_document' obj.pk %}">delete</a>
+        <small>(Uploaded at: {{ obj.uploaded_at }})</small>
+      </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+{% endblock %}

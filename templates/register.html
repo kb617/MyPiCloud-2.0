@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'register.css' %}" />
+<h2>Get Yourself Registered!! </h2>
+<br>
+
+<div class="Container">
+    <form action="/accounts/register/" method="post">{% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Register" />
+
+    </form>
+</div>
+{% endblock %}
