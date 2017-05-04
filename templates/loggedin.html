@@ -1,0 +1,9 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'loggedin.css' %}" />
+    <p>Hi {{full_name}}! You are now logged in. Click <a href="/accounts/logout/">here</a> to logout.</p>
+
+{% endblock %}

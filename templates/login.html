@@ -1,0 +1,28 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet", type="text/css" href="{% static 'login.css' %}" />
+
+
+
+  {% if form.errors %}
+    <p class="error">Sorry, that's not a valid username or password</p>
+  {% endif %}
+<div class="Container" >
+
+  <form action="/accounts/auth/" method="post">{% csrf_token %}
+    <label for="username">User name:</label>
+    <input type="text" name="username" value="" id="username">
+    <br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" value="" id="password">
+    <br>
+    <input type="submit" value="login" />
+
+  </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+h6 {
+    float: right;
+    font-size: 15px;
+    margin-top: 0;
+}
+
+p {
+    text-align: left;
+    margin-top: 200px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.btn a{
+    position: relative;
+    top: 100px;
+    left: 500px;
+    height: auto;
+    width: auto;
+    background-color: #466995;
+    padding: 20px;
+    color: #ffffff;
+    margin-left: 20px;
+    font-family: Courier;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td {
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+th {
+    background-color: #466995;
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+img {
+    width: 80px;
+    position: relative;
+    top: 80px;
+    left: 620px;
+}

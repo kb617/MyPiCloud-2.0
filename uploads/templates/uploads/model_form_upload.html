@@ -1,0 +1,17 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'uploads/model_form_upload.css' %}" />
+<img src="{% static 'uploads/home.png' %}"/>
+<div class="Container">
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+
+</div>
+
+  <p><a href="{% url 'home' %}">Click to Return</a></p>
+{% endblock %}

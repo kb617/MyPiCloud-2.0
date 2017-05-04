@@ -1,0 +1,42 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+<h6>Hi {{full_name}}! You are now logged in. Click <a href="/accounts/logout/">here</a> to logout.</h6>
+
+<link rel="stylesheet" type="text/css" href="{% static 'uploads/home.css' %}"/>
+<img src="{% static 'uploads/upload.png' %}" />
+
+<div class="btn">
+  <a href="{% url 'model_form_upload' %}">Click to Upload Your File</a>
+</div>
+
+<p>FILES ON THE CLOUD:</p>
+
+<table>
+
+<div class="TabHead">
+    <tr>
+        <th>File Name</th>
+        <th>Uploaded at</th>
+        <th>Comment</th>
+        <th>Actions</th>
+    </tr>
+</div>
+
+<div class="Container">
+  {% for obj in documents %}
+  <tr>
+    <td><a href="{{ obj.document.url }}">{{ obj.document.name }}</a></td>
+    <td>{{ obj.uploaded_at }}</td>
+    <td>{{ obj.description }}</td>
+    <td><a href="{% url 'delete_document' obj.pk %}">Delete</a></td>
+  </tr>
+{% endfor %}
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+</div>
+
+</table>
+
+{% endblock %}

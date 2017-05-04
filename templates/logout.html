@@ -1,0 +1,10 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'logout.css' %}" />
+
+    <p>Logged out!!</p>
+    <p>Click <a href="/accounts/login/"> here</a> to login again.</p>
+
+{% endblock %}

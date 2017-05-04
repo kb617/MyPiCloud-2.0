@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>MyPiCloud</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+    <div class="header">
+	    <h1>Welcome to MyPiCloud</h1>
+    </div>
+	{% block content %}
+	{% endblock %}
+
+	<div class="footer">
+
+	</div>
+</body>
+
+</html>

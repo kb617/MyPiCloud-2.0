@@ -1,0 +1,39 @@
+button[type=submit] {
+    margin-left: 100px;
+    position: relative;
+    top: 40px;
+    font: normal 20px courier !important;
+}
+
+.Container {
+    margin-left: 500px;
+
+}
+
+body {
+    height: auto;
+}
+p a{
+    text-decoration: none;
+    position: relative;
+    top: 200px;
+    left: 540px;
+    height: auto;
+    width: auto;
+    background-color: #466995;
+    padding: 20px;
+    color: #ffffff;
+    margin-left: 20px;
+    font-family: Courier;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+img {
+    width: 60px;
+    position: relative;
+    top: 320px;
+    left: 620px;
+}

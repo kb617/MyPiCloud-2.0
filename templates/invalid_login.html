@@ -1,0 +1,9 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'invalid_login.css' %}" />
+
+    <p>Oops!! Your login details are invalid!</p>
+    <p>Click <a href="/accounts/login/">here</a> to login again.</p>
+{% endblock %}
